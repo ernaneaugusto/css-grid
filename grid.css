@@ -49,3 +49,81 @@
 }
 
 /* Coloque seu código CSS abaixo /o/ */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 0.75rem 0.5rem;
+  border-radius: 4px;
+}
+.form-layout {
+  grid-template-areas:
+    "name name lastName lastName"
+    "email email email email"
+    "address address address number"
+    "city city state state"
+    "district district district district"
+    "about about about about"
+    "btnReset . . btnSubmit";
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+#name {
+  grid-area: name;
+}
+#last-name {
+  grid-area: lastName;
+}
+#email {
+  grid-area: email;
+}
+#address {
+  grid-area: address;
+}
+#number {
+  grid-area: number;
+}
+#city {
+  grid-area: city;
+}
+#state {
+  grid-area: state;
+}
+#district {
+  grid-area: district;
+}
+#about {
+  grid-area: about;
+}
+#btn-reset {
+  grid-area: btnReset;
+}
+#btn-submit {
+  grid-area: btnSubmit;
+}
+
+/* Botões */
+.btn {
+  border-radius: 4px;
+  border: transparent;
+  padding: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.8;
+  /* transition faz todos(all) os efeitos do botão ficarem suaves */
+  transition: 0.2s ease-in-out all;
+  width: 100%;
+}
+.btn:hover {
+  opacity: 1;
+  /* scale aumenta o tamanho do botão em 1.05 */
+  transform: scale(1.05);
+}
+.btn.btn-primary {
+  background-color: var(--yellow);
+}
+.btn.btn-danger {
+  background-color: var(--red);
+  color: var(--clouds);
+}

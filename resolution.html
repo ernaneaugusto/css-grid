@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do-jo CSS Grid Layout - AmbevTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="grid.css" />
+  </head>
+
+  <body id="body">
+    <main id="main-content">
+      <h1 class="title">Do-jo CSS Grid Layout - AmbevTech</h1>
+
+      <section class="card">
+        <h2 class="subtitle">Formulário com Grid Layout
+          <br/>
+          <span>SOLUÇÃO</span>
+        </h2>
+        
+        <form class="grid form-layout">
+          <input type="text" class="grid-item" type="text" placeholder="Nome" id="name" class="form-control" />
+          <input type="text" class="grid-item" type="text" placeholder="Sobrenome" id="last-name" class="form-control" />
+          <input type="text" class="grid-item" type="email" placeholder="Seu e-mail" id="email" class="form-control" />
+          <input type="text" class="grid-item" type="text" placeholder="Endereço/Rua/Avenida..." id="address" class="form-control" />
+          <input type="text" class="grid-item" type="text" placeholder="Número" id="number" class="form-control" />
+          <input type="text" class="grid-item" type="text" placeholder="Cidade" id="city" class="form-control" />
+          <input type="text" class="grid-item" type="text" placeholder="Estado" id="state" class="form-control" />
+          <input type="text" class="grid-item" type="text" placeholder="Bairro" id="district" class="form-control" />
+          <textarea class="grid-item" placeholder="Sobre você..." id="about" cols="30" rows="10"></textarea>
+          <button class="btn btn-danger" type="reset" id="btn-reset">Limpar</button>
+          <button class="btn btn-primary" type="submit" id="btn-submit">Cadastrar</button>
+        </form>
+        
+      </section>
+    </main>
+  </body>
+</html>
