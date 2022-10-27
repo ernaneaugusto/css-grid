@@ -1,49 +1,123 @@
-:root {
-    --black: #2c3e50;
-    --clouds: #ecf0f1;
-    --gray: #bdc3c7;
-    --red: #c0392b;
-    --yellow: #f1c40f;
+$black: #2c3e50;
+$clouds: #ecf0f1;
+$gray: #bdc3c7;
+$red: #c0392b;
+$yellow: #f1c40f;
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@keyframes slideTop {
+    0% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: .5;
+    }
+    
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
+
 
 * {
     font-family: 'Ubuntu', sans-serif, serif;
     box-sizing: border-box;
 }
 
+html {
+    background-color: $black;
+}
+
 body {
-    background-color: var(--black);
+    background-color: $black;
+    padding: 0;
+    margin: 0;
 }
 
 #main-content {
     text-align: center;
+    background-color: transparent;
 }
 
 .title {
-    color: var(--yellow);
+    color: $yellow;
+    margin-top: 0;
     margin-bottom: 2rem;
 }
 
 .subtitle {
-    color: var(--yellow);
+    color: $yellow;
     font-size: 1.5rem;
+    margin-top: 0;
     margin-bottom: .5rem;
+    animation: slideTop .75s;
 }
 
 .card {
-    background-color: var(--clouds);
+    background-color: $clouds;
     padding: 1rem;
-    border: 1px solid var(--gray);
     max-width: 600px;
     display: block;
     margin: 0 auto;
     border-radius: .5rem;
+    animation: slideTop .75s;
+}
+
+.lesson {
+    padding: 1.5rem;
+    background-color: $black;
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+#controls {
+    display: grid;
+    gap: 1rem;
+    grid-template: "btnPrev btnNext";
+    background-color: $black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.btn {
+    border: 1px solid transparent;
+    background-color: $yellow;
+    color: $black;
+    padding: 1rem;
+    display: block;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .2s ease-in-out all;
+
+    &:hover {
+        background-color: darken($yellow, 10);
+    }
+    &[disabled] {
+        background: #bdc3c7;
+        cursor: not-allowed;
+    }
 }
 
 .grid-item {
-    color: var(--clouds);
+    color: $clouds;
     padding: 0.5rem;
-    background-color: var(--red);
+    background-color: $red;
     border-radius: .5rem;
 }
 
