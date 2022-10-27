@@ -127,10 +127,14 @@ body {
     border-radius: 4px;
     width: 100%;
     cursor: pointer;
-    display: block;
     text-transform: uppercase;
     font-weight: bold;
     transition: .2s ease-in-out all;
+
+    &.btn-inline-block {
+        width: auto;
+        display: inline-block;
+    }
 
     &:hover {
         background-color: darken($yellow, 10);
