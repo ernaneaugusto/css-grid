@@ -64,8 +64,18 @@ body {
     max-width: 600px;
     display: block;
     margin: 0 auto;
-    border-radius: .5rem;
+    border-radius: 4px;
     animation: slideTop .75s;
+
+    &.full-page {
+        max-width: 100%;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 4rem;
+        z-index: 2;
+        border-radius: 0;
+    }
 }
 
 .lesson {
@@ -89,6 +99,23 @@ body {
     width: 100%;
     padding: 1rem;
     z-index: 1;
+}
+
+#full-page {
+    position: fixed;
+    z-index: 2;
+    padding: 1rem;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: .2s ease-in-out all;
+    border-radius: 0 0 0 4px;
+    background-color: $black;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .btn {
@@ -118,7 +145,7 @@ body {
     color: $clouds;
     padding: 0.5rem;
     background-color: $red;
-    border-radius: .5rem;
+    border-radius: 4px;
 }
 
 .grid {
