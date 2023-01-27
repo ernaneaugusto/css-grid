@@ -390,7 +390,7 @@
         <div class="grid-item gr3">
           Item 3
         </div>
-        <div class="grid-item">
+        <div class="grid-item gr4">
           Item 4
         </div>
         <div class="grid-item">
@@ -746,7 +746,7 @@
 
     <div class="lesson" *ngIf="lesson === 37">
       <h2 class="subtitle">#{{ lesson }} justify-content: space-around</h2>
-      <section [ngClass]="{'full-page': fullPageStyle}" class="card grid acsa">
+      <section [ngClass]="{'full-page': fullPageStyle}" class="card grid jcsa">
         <div class="grid-item">
           Item 1
         </div>
@@ -761,7 +761,7 @@
 
     <div class="lesson" *ngIf="lesson === 38">
       <h2 class="subtitle">#{{ lesson }} justify-content: space-evenly</h2>
-      <section [ngClass]="{'full-page': fullPageStyle}" class="card grid acse">
+      <section [ngClass]="{'full-page': fullPageStyle}" class="card grid jcse">
         <div class="grid-item">
           Item 1
         </div>
@@ -1106,30 +1106,6 @@
     </div>
 
     <div class="lesson" *ngIf="lesson === 58">
-      <h2 class="subtitle">#{{ lesson }} grid-column: (X) / (X) <br>+<br> grid-template-areas</h2>
-      <section [ngClass]="{'full-page': fullPageStyle}" class="card grid gcgta">
-        <div class="grid-item logo">
-          Logo
-        </div>
-        <div class="grid-item menu">
-          Menu
-        </div>
-        <div class="grid-item sidenav">
-          Sidenav
-        </div>
-        <div class="grid-item content">
-          Conteúdo
-        </div>
-        <div class="grid-item footer">
-          Footer
-        </div>
-        <div class="grid-item partners">
-          Posts
-        </div>
-      </section>
-    </div>
-
-    <div class="lesson" *ngIf="lesson === 59">
       <h2 class="subtitle">#{{ lesson }} grid-row: (X)</h2>
       <section [ngClass]="{'full-page': fullPageStyle}" class="card grid gr">
         <div class="grid-item item1">
@@ -1153,7 +1129,7 @@
       </section>
     </div>
 
-    <div class="lesson" *ngIf="lesson === 60">
+    <div class="lesson" *ngIf="lesson === 59">
       <h2 class="subtitle">#{{ lesson }} grid-row: span (X)</h2>
       <section [ngClass]="{'full-page': fullPageStyle}" class="card grid grs">
         <div class="grid-item item1">
@@ -1177,7 +1153,7 @@
       </section>
     </div>
 
-    <div class="lesson" *ngIf="lesson === 61">
+    <div class="lesson" *ngIf="lesson === 60">
       <h2 class="subtitle">#{{ lesson }} grid-row: (X) / (X)</h2>
       <section [ngClass]="{'full-page': fullPageStyle}" class="card grid gr2">
         <div class="grid-item item1">
@@ -1201,7 +1177,7 @@
       </section>
     </div>
 
-    <div class="lesson" *ngIf="lesson === 62">
+    <div class="lesson" *ngIf="lesson === 61">
       <h2 class="subtitle">#{{ lesson }} grid-row: (X) / (X) <br>+<br> grid-template-rows: [name1] 1fr 1fr [name2]</h2>
       <section [ngClass]="{'full-page': fullPageStyle}" class="card grid gr3">
         <div class="grid-item item1">
@@ -1225,28 +1201,7 @@
       </section>
     </div>
 
-    <div class="lesson" *ngIf="lesson === 63">
-      <h2 class="subtitle">#{{ lesson }} grid-row: (X) / (X) <br>+<br> grid-template-areas</h2>
-      <section [ngClass]="{'full-page': fullPageStyle}" class="card grid gr4">
-        <div class="grid-item menu">
-          Menu
-        </div>
-        <div class="grid-item sidenav">
-          Sidenav
-        </div>
-        <div class="grid-item content">
-          Content
-        </div>
-        <div class="grid-item posts">
-          Posts
-        </div>
-        <div class="grid-item footer">
-          Footer
-        </div>
-      </section>
-    </div>
-
-    <div class="lesson" *ngIf="lesson === 64">
+    <div class="lesson" *ngIf="lesson === 62">
       <h2 class="subtitle">#{{ lesson }} grid-area</h2>
       <section [ngClass]="{'full-page': fullPageStyle}" class="card grid ga">
         <div class="grid-item item1">
@@ -1270,31 +1225,7 @@
       </section>
     </div>
 
-    <div class="lesson" *ngIf="lesson === 65">
-      <h2 class="subtitle">#{{ lesson }} grid-area: span</h2>
-      <section [ngClass]="{'full-page': fullPageStyle}" class="card grid gas">
-        <div class="grid-item item1">
-          Item 1
-        </div>
-        <div class="grid-item item2">
-          Item 2
-        </div>
-        <div class="grid-item">
-          Item 3
-        </div>
-        <div class="grid-item">
-          Item 4
-        </div>
-        <div class="grid-item item5">
-          Item 5
-        </div>
-        <div class="grid-item">
-          Item 6
-        </div>
-      </section>
-    </div>
-
-    <div class="lesson" *ngIf="lesson === 66">
+    <div class="lesson" *ngIf="lesson === 63">
       <h2 class="subtitle">#{{ lesson }} justify-self</h2>
       <section [ngClass]="{'full-page': fullPageStyle}" class="card grid jc">
         <div class="grid-item item1">
@@ -1318,7 +1249,7 @@
       </section>
     </div>
 
-    <div class="lesson" *ngIf="lesson === 67">
+    <div class="lesson" *ngIf="lesson === 64">
       <h2 class="subtitle">#{{ lesson }} align-self</h2>
       <section [ngClass]="{'full-page': fullPageStyle}" class="card grid as">
         <div class="grid-item item1">
@@ -1347,8 +1278,9 @@
   </main>
 
   <section id="controls" *ngIf="lesson !== 0">
-    <button class="btn" (click)="prev()" [disabled]="lesson === 0">Anterior</button>
-    <button class="btn" (click)="next()" [disabled]="lesson === 67">Próximo</button>
+    <button class="btn" (click)="prev()" [disabled]="lesson === 1">Anterior</button>
+    <input class="input" type="number" [(ngModel)]="lesson" />
+    <button class="btn" (click)="next()" [disabled]="lesson >= 64">Próximo</button>
   </section>
 
   <section id="full-page" *ngIf="lesson !== 0">
