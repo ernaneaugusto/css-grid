@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+$black: #2c3e50;
+$clouds: #ecf0f1;
+$gray: #bdc3c7;
+$red: #c0392b;
+$yellow: #f1c40f;
+
+/**
+ * animation slideTop
+ */
+@keyframes slideTop {
+  0% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+* {
+  font-family: "Ubuntu", sans-serif, serif;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $black;
+}
+
+body {
+  background-color: $black;
+  padding: 0;
+  margin: 0;
+}
