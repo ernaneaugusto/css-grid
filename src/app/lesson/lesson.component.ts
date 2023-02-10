@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LessonComponent implements OnInit {
   private readonly KEY = 'lesson';
   public lesson = +this.getLocalstorage();
+  public totalLessons = 27;
   public fullPageStyle = false;
   public fullPageText = 'Tela cheia';
 
