@@ -1,0 +1,98 @@
+/* Variables */
+:root {
+  --black: #2c3e50;
+  --clouds: #ecf0f1;
+  --gray: #bdc3c7;
+  --red: #c0392b;
+  --redDark: #a63124;
+  --yellow: #f1c40f;
+  --yellowDark: #d9b00d;
+  --borderRadius: 0.5rem;
+  --borderSizeDefault: 0.15rem;
+}
+
+/* Reset */
+* {
+  font-family: "Ubuntu", sans-serif, serif;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--black);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Content */
+#main-content {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Helper styles */
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--yellow);
+}
+
+#form {
+  background-color: var(--clouds);
+  border-radius: var(--borderRadius);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+input,
+select {
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: var(--borderSizeDefault) solid transparent;
+  transition: 0.2s ease-in-out all;
+}
+
+select option {
+  padding: 1rem;
+}
+
+input:hover,
+select:hover {
+  border-color: var(--gray);
+}
+
+.btn {
+  border: var(--borderSizeDefault) solid transparent;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.2s ease-in-out all;
+  font-size: 1rem;
+}
+
+.btn.btn-yellow {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.btn.btn-yellow:hover {
+  background-color: var(--yellowDark);
+}
+
+.btn.btn-red {
+  background-color: var(--red);
+  color: var(--clouds);
+}
+
+.btn.btn-red:hover {
+  background-color: var(--redDark);
+}
