@@ -6,7 +6,7 @@ import { TestingComponent } from './testing/testing.component';
 
 const routes: Routes = [
   { path: '', component: LessonComponent },
-  { path: 'testing', component: TestingComponent }
+  { path: 'grid', component: TestingComponent }
 ];
 
 @NgModule({
