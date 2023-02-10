@@ -22,13 +22,13 @@ export class LessonComponent implements OnInit {
   }
 
   public prev(): void {
-    if (this.lesson === 0) return;
+    if (this.lesson <= 0) return;
     this.lesson--;
     this.setLocalstorage();
   }
 
   public next(): void {
-    if (this.lesson > 67) return;
+    if (this.lesson >= this.totalLessons) return;
     this.lesson++;
     this.setLocalstorage();
   }
