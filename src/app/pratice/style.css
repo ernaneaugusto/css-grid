@@ -44,7 +44,7 @@ body {
 #form {
   background-color: var(--clouds);
   border-radius: var(--borderRadius);
-  padding: 1rem;
+  padding: 3rem;
   margin-top: 1rem;
 }
 
