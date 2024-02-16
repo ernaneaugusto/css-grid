@@ -10,9 +10,10 @@ export class LessonComponent implements OnInit {
   public lesson = +this.getLocalstorage();
   public fullPageStyle = false;
   public fullPageText = 'Tela cheia';
+  public lessonsQuantity = 13;
 
   ngOnInit(): void {
-    this.init();
+    // this.init();
   }
 
   public init(): void {
@@ -21,13 +22,13 @@ export class LessonComponent implements OnInit {
   }
 
   public prev(): void {
-    if (this.lesson === 0) return;
+    if (this.lesson < 0) return;
     this.lesson--;
     this.setLocalstorage();
   }
 
   public next(): void {
-    if (this.lesson > 67) return;
+    if (this.lesson > this.lessonsQuantity) return;
     this.lesson++;
     this.setLocalstorage();
   }
