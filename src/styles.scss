@@ -3,6 +3,7 @@ $clouds: #ecf0f1;
 $gray: #bdc3c7;
 $red: #c0392b;
 $yellow: #f1c40f;
+$green: #27ae60;
 
 /**
  * animation slideTop
@@ -37,16 +38,16 @@ body {
 }
 
 /**
- * Grid
+ * Flexbox
  */
-.grid {
-  display: grid;
+.flex {
+  display: flex;
   gap: 0.5rem;
 }
 
-.grid-item {
+.item {
   color: $clouds;
-  padding: 0.5rem;
+  padding: .5rem;
   background-color: $red;
   border-radius: 4px;
 }
@@ -62,17 +63,19 @@ body {
 .card {
   background-color: $clouds;
   padding: 1rem;
-  max-width: 600px;
+  width: 500px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 4px;
   animation: slideTop 0.75s;
+  margin-bottom: 1rem;
 
   &.full-page {
     max-width: 100%;
     width: 100%;
     position: fixed;
     left: 0;
-    top: 4rem;
+    top: 7rem;
     z-index: 2;
     border-radius: 0;
   }
@@ -101,7 +104,7 @@ body {
 .subtitle {
   color: $yellow;
   font-size: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   animation: slideTop 0.75s;
 }
